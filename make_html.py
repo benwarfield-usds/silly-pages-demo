@@ -4,7 +4,8 @@ import datetime
 
 user = os.getenv("GITHUB_ACTOR")
 user_name = os.getenv("USER_NAME")
-
+if user_name is None or user_name == "null":
+    user_name = user
 
 template = """
 <html>
